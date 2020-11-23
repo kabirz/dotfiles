@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./target/thumbv7em-none-eabihf/debug/${workspaceFolderBasename}",
+            "interface": "swd",
+            "name": "Debug",
+            "device": "STM32H743VI",
+            "svdFile": "./STM32H743x.svd",
+            "configFiles": [
+                "./openocd.cfg"
+            ],
+            "preLaunchTask": "Build",
+            "runToMain": true,
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 400000000,
+                "source": "probe",
+                "swoFrequency": 2000000,
+                "decoders": [
+                    { "type": "console", "label": "Console", "port": 0, "encoding": "utf8" }
+                ]
+            },
+            "graphConfig": [
+            ]
+        }
+    ]
+}
