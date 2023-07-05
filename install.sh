@@ -31,3 +31,8 @@ install_alacritty() {
 install_starship() {
   ln -s "$(pwd)"/starship.toml ~/.config/starship.toml
 }
+
+# install anaconda
+install_anaconda() {
+  ln -s "$(pwd)"/anaconda.rc ~/.condarc
+}
