@@ -1,0 +1,10 @@
+[submodule "nvim"]
+	path = NvChad/nvim
+	url = https://github.com/NvChad/NvChad.git
+	branch = v2.0
+[submodule "nvim_custom"]
+	path = NvChad/custom
+	url = https://github.com/kabirz/NvChad-custom
+[submodule "zimfw"]
+	path = zimfw
+	url = https://github.com/kabirz/zimfw.git
