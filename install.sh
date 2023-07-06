@@ -34,7 +34,7 @@ install_starship() {
 
 # install anaconda
 install_anaconda() {
-  ln -s "$(pwd)"/anaconda.rc ~/.condarc
+  ln -s "$(pwd)"/anaconda.yml ~/.condarc
 }
 
 # install joshuto
