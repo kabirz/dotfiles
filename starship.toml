@@ -22,15 +22,15 @@ ignore_branches = ['master', 'main']
 
 [git_status]                    #
 conflicted = "🏳"
-ahead = "⇡ "
-behind = "⇣ "
+ahead = "⬆️"
+behind = "⬇️"
 diverged = "⇕ "
-untracked = "? "
-stashed = "📦 "
-modified = " "
-staged = '[++\($count\)](green)'
-renamed = "➜ "
-deleted = "🗑"
+untracked = "🤷"
+stashed = "✔️"
+modified = "✏️"
+staged = '[➕\($count\)](green)'
+renamed = "👅"
+deleted = "❌"
 
 [hostname]                      # The name of the module we are configuring is "hostname"
 ssh_only = false
