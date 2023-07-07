@@ -11,6 +11,11 @@ install_nvim() {
   popd || exit
 }
 
+# install gitconfig
+install_gitconfig() {
+  ln -s "$(pwd)"/.gitconfig ~/.gitconfig
+}
+
 # install tmux
 install_tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
