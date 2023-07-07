@@ -16,7 +16,7 @@ truncate_to_repo = false
 style = "bold blue"
 
 [git_branch]                    # The name of the module we are configuring is "git_branch"
-symbol = " "
+symbol = "🍣"
 style = "bold yellow"
 ignore_branches = ['master', 'main']
 
@@ -24,13 +24,13 @@ ignore_branches = ['master', 'main']
 conflicted = "🏳"
 ahead = "⬆️"
 behind = "⬇️"
-diverged = "⇕ "
+diverged = "⇕"
 untracked = "🤷"
-stashed = "✔️"
-modified = "✏️"
+stashed = "📦"
+modified = "📝"
 staged = '[➕\($count\)](green)'
 renamed = "👅"
-deleted = "❌"
+deleted = "🗑"
 
 [hostname]                      # The name of the module we are configuring is "hostname"
 ssh_only = false
