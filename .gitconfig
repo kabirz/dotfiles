@@ -3,6 +3,7 @@
 
 [core]
 	editor = vim
+  pager = delta
 
 [color]
 	ui = auto
@@ -28,12 +29,25 @@
 [url "https://kgithub.com"]
 	insteadOf = https://github.com
 
+
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[interactive]
+  diffFilter = delta --color-only
 
 [delta]
 	side-by-side = true
 	features = decorations
+  navigate = true
+  light = false
+  line-numbers = true
 
 [delta "interactive"]
 	keep-plus-minus-markers = false

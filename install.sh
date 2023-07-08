@@ -46,3 +46,8 @@ install_anaconda() {
 install_joshuto() {
   ln -s "$(pwd)"/joshuto ~/.config/joshuto
 }
+
+# install gitui
+install_gitui() {
+  ln -s "$(pwd)"/gitui ~/.config/gitui
+}
