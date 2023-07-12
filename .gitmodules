@@ -1,10 +1,20 @@
 [submodule "nvim"]
-	path = NvChad/nvim
+	path = nvim/NvChad/base
 	url = https://github.com/NvChad/NvChad.git
 	branch = v2.0
-[submodule "nvim_custom"]
-	path = NvChad/custom
+[submodule "nvchad_custom"]
+	path = nvim/NvChad/custom
 	url = https://github.com/kabirz/NvChad-custom
+	branch = main
 [submodule "zimfw"]
 	path = zimfw
 	url = https://github.com/kabirz/zimfw.git
+	branch = main
+[submodule "AstroNvim"]
+	path = nvim/AstroNvim/base
+	url = https://github.com/AstroNvim/AstroNvim
+	branch = main
+[submodule "astro_user"]
+	path = nvim/AstroNvim/user
+	url = https://github.com/kabirz/AstroNvim_user
+	branch = main

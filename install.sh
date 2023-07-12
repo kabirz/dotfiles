@@ -4,10 +4,20 @@
 # install_xxx
 
 # install nvim
-install_nvim() {
-  pushd NvChad || exit
-  ln -s "$(pwd)"/custom nvim/lua/custom
-  ln -s "$(pwd)"/nvim ~/.config/nvim
+install_nvim_nvchad() {
+  pushd nvim/NvChad || exit
+  rm base/lua/custom -fr
+  rm ~/.config/nvim -fr
+  ln -s "$(pwd)"/custom base/lua/custom
+  ln -s "$(pwd)"/base ~/.config/nvim
+  popd || exit
+}
+install_nvim_astro() {
+  pushd nvim/AstroNvim || exit
+  rm base/lua/user -fr
+  rm ~/.config/nvim -fr
+  ln -s "$(pwd)"/user base/lua/user
+  ln -s "$(pwd)"/base ~/.config/nvim
   popd || exit
 }
 
@@ -51,3 +61,27 @@ install_joshuto() {
 install_gitui() {
   ln -s "$(pwd)"/gitui ~/.config/gitui
 }
+
+for element in "$@"; do
+  if [ "$element" == "nv" ]; then
+    install_nvim_nvchad
+  elif [ "$element" == "as" ]; then
+    install_nvim_astro
+  elif [ "$element" == "git" ]; then
+    install_gitconfig
+  elif [ "$element" == "tmux" ]; then
+    install_tmux
+  elif [ "$element" == "cargo" ]; then
+    install_cargo_config
+  elif [ "$element" == "ala" ]; then
+    install_alacritty
+  elif [ "$element" == "star" ]; then
+    install_starship
+  elif [ "$element" == "conda" ]; then
+    install_anaconda
+  elif [ "$element" == "jo" ]; then
+    install_joshuto
+  elif [ "$element" == "gitui" ]; then
+    install_nvim_gitui
+  fi
+done
